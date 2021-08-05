@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02a08ba43e86188525b1423657d230e6",
+    "content-hash": "6286c5a7d4bc859a7d1a620ac7259e76",
     "packages": [
         {
             "name": "lowem/easy-curl",
-            "version": "v1.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lowe-Man/easy-curl.git",
-                "reference": "56d508218cf55e629350b40fa3a0f5aca5fd60c5"
+                "reference": "4d8e5d861c8f05aeee464531862bed5a4c64a55a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/56d508218cf55e629350b40fa3a0f5aca5fd60c5",
-                "reference": "56d508218cf55e629350b40fa3a0f5aca5fd60c5",
+                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/4d8e5d861c8f05aeee464531862bed5a4c64a55a",
+                "reference": "4d8e5d861c8f05aeee464531862bed5a4c64a55a",
                 "shasum": ""
             },
             "require": {
@@ -45,9 +45,9 @@
             "description": "Allow you to make requests to API end points easily",
             "support": {
                 "issues": "https://github.com/Lowe-Man/easy-curl/issues",
-                "source": "https://github.com/Lowe-Man/easy-curl/tree/v1.0.0"
+                "source": "https://github.com/Lowe-Man/easy-curl/tree/v2.0.1"
             },
-            "time": "2021-08-03T18:45:03+00:00"
+            "time": "2021-08-05T17:08:03+00:00"
         }
     ],
     "packages-dev": [
