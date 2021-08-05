@@ -1,0 +1,20 @@
+{
+    "name": "lowem/geoserver-php",
+    "description": "Wrapper for Geoserver API",
+    "type": "library",
+    "require": {
+        "lowem/easy-curl": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lowem\\GeoserverPHP\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Lowe",
+            "email": "loweman64@outlook.com"
+        }
+    ]
+}

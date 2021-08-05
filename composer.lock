@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "863a1d8cda6b2f2225295ed2133fe222",
+    "packages": [
+        {
+            "name": "lowem/easy-curl",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lowe-Man/easy-curl.git",
+                "reference": "56d508218cf55e629350b40fa3a0f5aca5fd60c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/56d508218cf55e629350b40fa3a0f5aca5fd60c5",
+                "reference": "56d508218cf55e629350b40fa3a0f5aca5fd60c5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lowem\\EasyCurl\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Lowe",
+                    "email": "loweman64@outlook.com"
+                }
+            ],
+            "description": "Allow you to make requests to API end points easily",
+            "support": {
+                "issues": "https://github.com/Lowe-Man/easy-curl/issues",
+                "source": "https://github.com/Lowe-Man/easy-curl/tree/v1.0.0"
+            },
+            "time": "2021-08-03T18:45:03+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
