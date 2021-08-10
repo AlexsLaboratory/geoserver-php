@@ -1,0 +1,41 @@
+{
+  "name": "geoserver-php",
+  "version": "1.0.0",
+  "description": "<h3 align=\"center\">Geoserver PHP</h3>",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "changelog": "auto-changelog"
+  },
+  "auto-changelog": {
+    "template": "changelog-template.hbs",
+    "unreleased": false,
+    "commitLimit": false,
+    "breakingPattern": "BREAKING CHANGE:",
+    "ignoreCommitPattern": "^test:.+",
+    "hideCredit": true,
+    "replaceText": {
+      "feat:": "",
+      "fix:": "",
+      "chore:": "",
+      "refactor:": "",
+      "style:": "",
+      "docs:": "",
+      "perf:": ""
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lowe-Man/geoserver-php.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lowe-Man/geoserver-php/issues"
+  },
+  "homepage": "https://github.com/Lowe-Man/geoserver-php#readme",
+  "devDependencies": {
+    "auto-changelog": "^2.3.0"
+  }
+}
