@@ -2,7 +2,6 @@
 
 use Lowem\EasyCurl\HTTPRequestException;
 use Lowem\GeoserverPHP\CoverageStores;
-use Lowem\GeoserverPHP\MissingParamException;
 use PHPUnit\Framework\TestCase;
 
 class CoverageStoresTest extends TestCase {
