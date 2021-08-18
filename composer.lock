@@ -4,26 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "044d33ab53bc7c1fb5f9ce9a694959e7",
+    "content-hash": "d3b5cd8d66cb91400d0a8b5a580a817d",
     "packages": [
         {
             "name": "lowem/easy-curl",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lowe-Man/easy-curl.git",
-                "reference": "74abad1209e7b32475f832f737e78dc5cb8e4cf1"
+                "reference": "83185aab601fafc125ad3b9a7724112a70cc826a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/74abad1209e7b32475f832f737e78dc5cb8e4cf1",
-                "reference": "74abad1209e7b32475f832f737e78dc5cb8e4cf1",
+                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/83185aab601fafc125ad3b9a7724112a70cc826a",
+                "reference": "83185aab601fafc125ad3b9a7724112a70cc826a",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*"
             },
             "require-dev": {
+                "ext-json": "*",
                 "phpunit/phpunit": "^9.5"
             },
             "type": "library",
@@ -45,9 +46,9 @@
             "description": "Allow you to make requests to API end points easily",
             "support": {
                 "issues": "https://github.com/Lowe-Man/easy-curl/issues",
-                "source": "https://github.com/Lowe-Man/easy-curl/tree/v3.0.0"
+                "source": "https://github.com/Lowe-Man/easy-curl/tree/v3.1.0"
             },
-            "time": "2021-08-06T03:56:51+00:00"
+            "time": "2021-08-08T04:32:19+00:00"
         }
     ],
     "packages-dev": [
@@ -2148,7 +2149,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
 }

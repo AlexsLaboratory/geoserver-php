@@ -1,7 +1,6 @@
 <?php
 
 namespace Lowem\GeoserverPHP;
-require_once "vendor/autoload.php";
 
 class Wrapper {
   private string $baseURL = "";
