@@ -34,7 +34,7 @@ class Workspaces extends Wrapper {
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $curl->post("<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <workspace>
-    <name>{$workspaceName}</name>
+    <name>$workspaceName</name>
 </workspace>", [
       "Content-Type: application/xml"
     ]);
@@ -53,7 +53,7 @@ class Workspaces extends Wrapper {
         die($e->getCode());
       }
     }
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$workspaceName}");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $curl->get();
     return $curl->getExecMessage();
@@ -71,11 +71,11 @@ class Workspaces extends Wrapper {
         die($e->getCode());
       }
     }
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$currentWorkspaceName}");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$currentWorkspaceName");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $curl->put("<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <workspace>
-    <name>{$newWorkspaceName}</name>
+    <name>$newWorkspaceName</name>
 </workspace>", [
       "Content-Type: application/xml"
     ]);
@@ -95,7 +95,7 @@ class Workspaces extends Wrapper {
       }
     }
     $recurseString = $recurse ? "true" : "false";
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$workspaceName}?recurse={$recurseString}");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName?recurse=$recurseString");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $curl->delete();
     return $curl->getExecMessage();

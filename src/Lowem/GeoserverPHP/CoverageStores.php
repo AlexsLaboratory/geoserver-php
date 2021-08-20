@@ -20,7 +20,7 @@ class CoverageStores extends Wrapper {
         die($e->getCode());
       }
     }
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$workspaceName}/coveragestores");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $curl->get([
       "Accept: application/json"
@@ -42,7 +42,7 @@ class CoverageStores extends Wrapper {
     foreach ($requireParams as $value) {
       if (!array_key_exists($value, $data) || empty($data[$value])) {
         try {
-          throw new MissingParamException("Sorry but \"{$value}\" is a required field.", 404);
+          throw new MissingParamException("Sorry but \"$value\" is a required field.", 404);
         } catch (MissingParamException $e) {
           echo $e->getMessage();
           die($e->getCode());
@@ -78,7 +78,7 @@ class CoverageStores extends Wrapper {
         die($e->getCode());
       }
     }
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$workspaceName}/coveragestores/{$store}");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $curl->get([
       "Accept: application/json"
@@ -112,14 +112,14 @@ class CoverageStores extends Wrapper {
     foreach ($data as $key => $value) {
       if (!in_array($key, $acceptedParams)) {
         try {
-          throw new MissingParamException("Sorry but \"{$key}\" is not a valid field.", 404);
+          throw new MissingParamException("Sorry but \"$key\" is not a valid field.", 404);
         } catch (MissingParamException $e) {
           echo $e->getMessage();
           die($e->getCode());
         }
       }
     }
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$workspaceName}/coveragestores/{$store}");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $jsonData = json_encode($data);
     $data = "{
@@ -144,7 +144,7 @@ class CoverageStores extends Wrapper {
       }
     }
 
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/{$workspaceName}/coveragestores/{$store}/file.geotiff");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store/file.geotiff");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
     $file = file_get_contents($absFilePath);
     $curl->put($file, [

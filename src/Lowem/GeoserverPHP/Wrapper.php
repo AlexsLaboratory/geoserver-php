@@ -3,15 +3,15 @@
 namespace Lowem\GeoserverPHP;
 
 class Wrapper {
-  private string $baseURL = "";
-  private string $username = "";
-  private string $password = "";
+  private $baseURL;
+  private $username = "";
+  private $password = "";
 
   public function __construct($baseURL) {
     $this->baseURL = $baseURL . "/geoserver/rest";
   }
 
-  public function setBasicAuth($username, $password): void {
+  public function setBasicAuth($username, $password) {
     $this->username = $username;
     $this->password = $password;
   }

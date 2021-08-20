@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lowem/easy-curl",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lowe-Man/easy-curl.git",
-                "reference": "83185aab601fafc125ad3b9a7724112a70cc826a"
+                "reference": "8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/83185aab601fafc125ad3b9a7724112a70cc826a",
-                "reference": "83185aab601fafc125ad3b9a7724112a70cc826a",
+                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84",
+                "reference": "8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84",
                 "shasum": ""
             },
             "require": {
@@ -30,12 +30,12 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Lowem\\EasyCurl\\": ""
+                    "Lowem\\EasyCurl\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache-2.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -44,11 +44,18 @@
                 }
             ],
             "description": "Allow you to make requests to API end points easily",
+            "keywords": [
+                "curl",
+                "fsockopen",
+                "http",
+                "ipv6",
+                "sockets"
+            ],
             "support": {
                 "issues": "https://github.com/Lowe-Man/easy-curl/issues",
-                "source": "https://github.com/Lowe-Man/easy-curl/tree/v3.1.0"
+                "source": "https://github.com/Lowe-Man/easy-curl/tree/v3.1.1"
             },
-            "time": "2021-08-08T04:32:19+00:00"
+            "time": "2021-08-19T22:20:08+00:00"
         }
     ],
     "packages-dev": [
