@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v1.0.2](https://github.com/Lowe-Man/geoserver-php/compare/v1.0.1...v1.0.2) - 2021-08-20
+
+
+
+
+### Commits
+
+-  Edit Changelog to Reflect Recent Changes [`af6e922`](https://github.com/Lowe-Man/geoserver-php/commit/af6e9225d2b504e312301d838096d6772ea154a6)
+-  Change PHP Syntax to 7.0 for Broader Support [`e65416c`](https://github.com/Lowe-Man/geoserver-php/commit/e65416c0fe47111ae3f7a19ac9f23ea04288144c)
+-  Change PHP Language Setting to PHP 7.0 [`2b6dc4c`](https://github.com/Lowe-Man/geoserver-php/commit/2b6dc4cfc9a2ca0ddcab93deb61805ee57b2ea5e)
+
 ## [v1.0.1](https://github.com/Lowe-Man/geoserver-php/compare/v1.0.0...v1.0.1) - 2021-08-18
 
 
