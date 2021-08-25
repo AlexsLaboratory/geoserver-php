@@ -95,9 +95,11 @@ class Workspaces extends Wrapper {
       }
     }
     $recurseString = $recurse ? "true" : "false";
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName?recurse=$recurseString");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
-    $curl->delete();
+    $curl->delete([
+      "recurse" => $recurseString
+    ]);
     return $curl->getExecMessage();
   }
 }

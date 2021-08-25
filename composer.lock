@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3b5cd8d66cb91400d0a8b5a580a817d",
+    "content-hash": "fc1c6d6b585af7f82dd3c692f2e91e8c",
     "packages": [
         {
             "name": "lowem/easy-curl",
-            "version": "v3.1.1",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lowe-Man/easy-curl.git",
-                "reference": "8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84"
+                "reference": "33a48e2d1d63ecd949806e5f86397101bbddaeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84",
-                "reference": "8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84",
+                "url": "https://api.github.com/repos/Lowe-Man/easy-curl/zipball/33a48e2d1d63ecd949806e5f86397101bbddaeff",
+                "reference": "33a48e2d1d63ecd949806e5f86397101bbddaeff",
                 "shasum": ""
             },
             "require": {
@@ -53,9 +53,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Lowe-Man/easy-curl/issues",
-                "source": "https://github.com/Lowe-Man/easy-curl/tree/v3.1.1"
+                "source": "https://github.com/Lowe-Man/easy-curl/tree/v4.0.0"
             },
-            "time": "2021-08-19T22:20:08+00:00"
+            "time": "2021-08-25T16:58:56+00:00"
         }
     ],
     "packages-dev": [
