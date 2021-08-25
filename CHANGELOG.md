@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v1.1.0](https://github.com/Lowe-Man/geoserver-php/compare/v1.0.3...v1.1.0) - 2021-08-25
+
+
+
+
+### Commits
+
+-  Create Delete Method for CoverStores [`9f1b5e6`](https://github.com/Lowe-Man/geoserver-php/commit/9f1b5e6d8a4fe6972495d9242f5b2aacb45975b8)
+-  Update to Easy-Curl v4.0.0 [`7b7d8b5`](https://github.com/Lowe-Man/geoserver-php/commit/7b7d8b5f5bf892d90ccd0db7e103582441a5fd1f)
+
+## [v1.0.3](https://github.com/Lowe-Man/geoserver-php/compare/v1.0.2...v1.0.3) - 2021-08-25
+
+
+
+
+### Commits
+
+-  Update Changelog v1.0.2 [`d7bdfea`](https://github.com/Lowe-Man/geoserver-php/commit/d7bdfeacf8570a94252abf137b7d76122de4cabb)
+-  If Update Field is Empty Ignore it [`39c5ab5`](https://github.com/Lowe-Man/geoserver-php/commit/39c5ab51bbf984d10fc71f9b536cf35b7f43be35)
+
 ## [v1.0.2](https://github.com/Lowe-Man/geoserver-php/compare/v1.0.1...v1.0.2) - 2021-08-20
 
 
