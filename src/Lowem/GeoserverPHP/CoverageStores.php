@@ -118,6 +118,10 @@ class CoverageStores extends Wrapper {
           die($e->getCode());
         }
       }
+
+      if (empty($value)) {
+        unset($data[$key]);
+      }
     }
     $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
