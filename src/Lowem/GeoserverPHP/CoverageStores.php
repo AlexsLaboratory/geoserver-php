@@ -138,6 +138,47 @@ class CoverageStores extends Wrapper {
   /**
    * @throws HTTPRequestException
    */
+  public function delete($workspaceName, $store, $options = [
+    "purge" => "all",
+    "recurse" => FALSE
+  ]) {
+    $acceptedParams = [
+      "purge",
+      "recurse"
+    ];
+
+    $options["recurse"] = $options["recurse"] ? "true" : "false";
+
+    if (empty($workspaceName) || empty($store)) {
+      try {
+        throw new MissingParamException("Sorry but \"workspaceName\" and \"store\" are required fields.", 404);
+      } catch (MissingParamException $e) {
+        echo $e->getMessage();
+        die($e->getCode());
+      }
+    }
+
+    foreach ($options as $key => $value) {
+      if (!in_array($key, $acceptedParams)) {
+        try {
+          throw new MissingParamException("Sorry but \"$key\" is not a valid field.", 404);
+        } catch (MissingParamException $e) {
+          echo $e->getMessage();
+          die($e->getCode());
+        }
+      }
+    }
+
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
+    $curl->setBasicAuth($this->getUsername(), $this->getPassword());
+    $curl->delete($options, [
+      "Accept: application/json"
+    ]);
+  }
+
+  /**
+   * @throws HTTPRequestException
+   */
   public function geoTiffUpload($workspaceName, $store, $absFilePath) {
     if (empty($workspaceName) || empty($store) || empty($absFilePath)) {
       try {
