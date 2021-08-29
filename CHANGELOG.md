@@ -23,7 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
--  Update Changelog v1.0.2 [`d7bdfea`](https://github.com/Lowe-Man/geoserver-php/commit/d7bdfeacf8570a94252abf137b7d76122de4cabb)
 -  If Update Field is Empty Ignore it [`39c5ab5`](https://github.com/Lowe-Man/geoserver-php/commit/39c5ab51bbf984d10fc71f9b536cf35b7f43be35)
 
 ## [v1.0.2](https://github.com/Lowe-Man/geoserver-php/compare/v1.0.1...v1.0.2) - 2021-08-20
@@ -33,7 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
--  Edit Changelog to Reflect Recent Changes [`af6e922`](https://github.com/Lowe-Man/geoserver-php/commit/af6e9225d2b504e312301d838096d6772ea154a6)
 -  Change PHP Syntax to 7.0 for Broader Support [`e65416c`](https://github.com/Lowe-Man/geoserver-php/commit/e65416c0fe47111ae3f7a19ac9f23ea04288144c)
 -  Change PHP Language Setting to PHP 7.0 [`2b6dc4c`](https://github.com/Lowe-Man/geoserver-php/commit/2b6dc4cfc9a2ca0ddcab93deb61805ee57b2ea5e)
 
@@ -44,7 +42,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
--  Add More Comprehensive README and Create CHANGELOG [`c378893`](https://github.com/Lowe-Man/geoserver-php/commit/c3788932179bc7bf522adb4e464fdd587da2f320)
 -  Change Line Endings [`ccd1893`](https://github.com/Lowe-Man/geoserver-php/commit/ccd1893e625aa5d9d08d88c1c385b7927d541cd9)
 - build: Add NodeJS to Project For Generating the CHANGELOG Automatically [`fa198dc`](https://github.com/Lowe-Man/geoserver-php/commit/fa198dc22bbabc867b57764f032b75a78a05dbb0)
 -  Change PSR-4 Autoload to Match Desired Namespace [`7fe27f8`](https://github.com/Lowe-Man/geoserver-php/commit/7fe27f8dd773aa16cc1a23a4a86bc8810a794f74)

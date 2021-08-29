@@ -13,7 +13,7 @@
     "unreleased": false,
     "commitLimit": false,
     "breakingPattern": "BREAKING CHANGE:",
-    "ignoreCommitPattern": "^test:.+",
+    "ignoreCommitPattern": "^test:.+|docs:.+",
     "hideCredit": true,
     "replaceText": {
       "feat:": "",
@@ -21,7 +21,6 @@
       "chore:": "",
       "refactor:": "",
       "style:": "",
-      "docs:": "",
       "perf:": ""
     }
   },
