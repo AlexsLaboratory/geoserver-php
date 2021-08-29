@@ -3,7 +3,7 @@
   "description": "Wrapper for Geoserver API",
   "type": "library",
   "require": {
-    "lowem/easy-curl": "^4.0",
+    "lowem/easy-curl": "^5.0",
     "ext-json": "*"
   },
   "require-dev": {
