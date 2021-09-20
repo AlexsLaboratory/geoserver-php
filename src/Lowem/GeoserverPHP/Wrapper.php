@@ -8,7 +8,7 @@ class Wrapper {
   private $password = "";
 
   public function __construct($baseURL) {
-    $this->baseURL = $baseURL . "/geoserver/rest";
+    $this->baseURL = $baseURL . "/rest";
   }
 
   public function setBasicAuth($username, $password) {
