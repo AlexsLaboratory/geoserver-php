@@ -5,8 +5,10 @@ use PHPUnit\Framework\TestCase;
 use Lowem\EasyCurl\HTTPRequestException;
 
 class WorkspacesTest extends TestCase {
+  private $baseURL = "http://192.168.160.137:8080/geoserver";
+
   public function testGetAll() {
-    $workspace = new Workspaces("http://192.168.160.137:8080");
+    $workspace = new Workspaces($this->baseURL);
     $workspace->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     $result = "";
@@ -21,7 +23,7 @@ class WorkspacesTest extends TestCase {
   }
 
   public function testCreate() {
-    $workspace = new Workspaces("http://192.168.160.137:8080");
+    $workspace = new Workspaces($this->baseURL);
     $workspace->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
@@ -34,7 +36,7 @@ class WorkspacesTest extends TestCase {
   }
 
   public function testGet() {
-    $workspace = new Workspaces("http://192.168.160.137:8080");
+    $workspace = new Workspaces($this->baseURL);
     $workspace->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     $result = "";
@@ -49,7 +51,7 @@ class WorkspacesTest extends TestCase {
   }
 
   public function testUpdate() {
-    $workspace = new Workspaces("http://192.168.160.137:8080");
+    $workspace = new Workspaces($this->baseURL);
     $workspace->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
@@ -62,7 +64,7 @@ class WorkspacesTest extends TestCase {
   }
 
   public function testDelete() {
-    $workspace = new Workspaces("http://192.168.160.137:8080");
+    $workspace = new Workspaces($this->baseURL);
     $workspace->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {

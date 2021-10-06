@@ -5,8 +5,10 @@ use Lowem\GeoserverPHP\CoverageStores;
 use PHPUnit\Framework\TestCase;
 
 class CoverageStoresTest extends TestCase {
+  private $baseURL = "http://192.168.160.137:8080/geoserver";
+
   public function testGetAll() {
-    $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+    $coverageStore = new CoverageStores($this->baseURL);
     $coverageStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     $result = "";
@@ -21,7 +23,7 @@ class CoverageStoresTest extends TestCase {
   }
 
   public function testCreate() {
-    $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+    $coverageStore = new CoverageStores($this->baseURL);
     $coverageStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
@@ -40,7 +42,7 @@ class CoverageStoresTest extends TestCase {
   }
 
   public function testGet() {
-    $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+    $coverageStore = new CoverageStores($this->baseURL);
     $coverageStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     $result = "";
@@ -55,7 +57,7 @@ class CoverageStoresTest extends TestCase {
   }
 
   public function testUpdate() {
-    $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+    $coverageStore = new CoverageStores($this->baseURL);
     $coverageStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
@@ -70,7 +72,7 @@ class CoverageStoresTest extends TestCase {
   }
 
   public function testGeoTiffUpload() {
-    $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+    $coverageStore = new CoverageStores($this->baseURL);
     $coverageStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
