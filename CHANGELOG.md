@@ -6,6 +6,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v1.3.0](https://github.com/Lowe-Man/geoserver-php/compare/v1.2.1...v1.3.0) - 2021-10-06
+
+
+
+
+### Commits
+
+-  Allow Upload of ShapeFiles [`8716580`](https://github.com/Lowe-Man/geoserver-php/commit/8716580d5ae8f4efc62c60983695004761c3caf7)
+-  Update Packages [`dcd9957`](https://github.com/Lowe-Man/geoserver-php/commit/dcd99577dbacc676dd39617908d63e226b7e3d1a)
+
+## [v1.2.1](https://github.com/Lowe-Man/geoserver-php/compare/v1.2.0...v1.2.1) - 2021-09-20
+
+
+
+
+### Commits
+
+-  Make baseURL Broader [`97c74d6`](https://github.com/Lowe-Man/geoserver-php/commit/97c74d6602e9f7cde79adaac1c17a06deea4fadf)
+
+## [v1.2.0](https://github.com/Lowe-Man/geoserver-php/compare/v1.1.1...v1.2.0) - 2021-08-29
+
+
+
+
+### Commits
+
+-  Update to v5.0 of easy-curl [`7704c58`](https://github.com/Lowe-Man/geoserver-php/commit/7704c586d163cd891d25289d96a109702be566e9)
+
 ## [v1.1.1](https://github.com/Lowe-Man/geoserver-php/compare/v1.1.0...v1.1.1) - 2021-08-28
 
 
