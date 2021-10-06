@@ -63,7 +63,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `getAll()` - Returns a JSON object of all the workspaces available along with each one's attributes.
     - **Example:**
       ```php
-      $workspace = new Workspaces("http://192.168.160.137:8080");
+      $workspace = new Workspaces("http://192.168.160.137:8080/geoserver");
       $workspace->setBasicAuth("admin", "geoserver");
       $result = "";
       try {
@@ -76,7 +76,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `create(workspaceName)` - Creates a new workspace.
     - **Example:**
       ```php
-      $workspace = new Workspaces("http://192.168.160.137:8080");
+      $workspace = new Workspaces("http://192.168.160.137:8080/geoserver");
       $workspace->setBasicAuth("admin", "geoserver");
       try {
         $workspace->create("Test1");
@@ -87,7 +87,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `get(workspaceName)` - Returns the attributes of a specific workspace.
     - **Example:**
       ```php
-      $workspace = new Workspaces("http://192.168.160.137:8080");
+      $workspace = new Workspaces("http://192.168.160.137:8080/geoserver");
       $workspace->setBasicAuth("admin", "geoserver");
       $result = "";
       try {
@@ -100,7 +100,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `update(currentWorkspaceName, newWorkspaceName)` - Rename a specific workspace.
     - **Example:**
       ```php
-      $workspace = new Workspaces("http://192.168.160.137:8080");
+      $workspace = new Workspaces("http://192.168.160.137:8080/geoserver");
       $workspace->setBasicAuth("admin", "geoserver");
       try {
         $workspace->update("Test1", "Test12");
@@ -123,7 +123,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `getAll(workspaceName)` - Returns a JSON object of all stores available in a specific workspace.
     - **Example:**
       ```php
-      $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+      $coverageStore = new CoverageStores("http://192.168.160.137:8080/geoserver");
       $coverageStore->setBasicAuth("admin", "geoserver");
       $result = "";
       try {
@@ -136,7 +136,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `create(data)` - Create a new coverage store by inputting a key value pair array of attributes
     - **Example:**
       ```php
-      $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+      $coverageStore = new CoverageStores("http://192.168.160.137:8080/geoserver");
       $coverageStore->setBasicAuth("admin", "geoserver");
       try {
         $coverageStore->create([
@@ -153,7 +153,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `get(workspaceName, store)` - Get a coverage store while outputting the result using JSON.
     - **Example:**
       ```php
-      $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+      $coverageStore = new CoverageStores("http://192.168.160.137:8080/geoserver");
       $coverageStore->setBasicAuth("admin", "geoserver");
       $result = "";
       try {
@@ -168,7 +168,7 @@ use Lowem\GeoserverPHP\CoverageStores;
     **Note:** You only need to supply the fields that you would like to update.
     - **Example:**
       ```php
-      $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+      $coverageStore = new CoverageStores("http://192.168.160.137:8080/geoserver");
       $coverageStore->setBasicAuth("admin", "geoserver");
       try {
         $coverageStore->update("Test1", "TestCoverStore2", [
@@ -181,7 +181,7 @@ use Lowem\GeoserverPHP\CoverageStores;
 - `geoTiffUpload(workspaceName, store, absFilePath)` - Add geoTiff file to a store.
     - **Example:**
       ```php
-      $coverageStore = new CoverageStores("http://192.168.160.137:8080");
+      $coverageStore = new CoverageStores("http://192.168.160.137:8080/geoserver");
       $coverageStore->setBasicAuth("admin", "geoserver");
       try {
         $coverageStore->geoTiffUpload("Test1", "test10", "C:\Users\LoweM\Downloads\wc2.1_2.5m_prec_2010-2018\wc2.1_2.5m_prec_2010-03.tif");
@@ -189,6 +189,20 @@ use Lowem\GeoserverPHP\CoverageStores;
         echo $e->getCustomMessage();
       }
       ```
+
+### DataStores `new DataStores(baseUrl)`
+- `shapeFileUpload($workspaceName, $store, $absFilePath)` - Uploads ShapeFile to a store
+    - **Example:**
+      ```php
+      $dataStore = new DataStores($this->baseURL);
+      $dataStore->setBasicAuth("admin", "geoserver");
+      try {
+        $dataStore->shapeFileUpload("acme", "nyc_roads5", "/Users/LoweM/Downloads/nyc_roads.zip");
+      } catch (HTTPRequestException $e) {
+        echo $e->getCustomMessage();
+      }
+      ```
+
 ## ✍️ Authors <a name="authors"></a>
 
 - [@Lowe-Man](https://github.com/Lowe-Man) - Idea & Initial work
