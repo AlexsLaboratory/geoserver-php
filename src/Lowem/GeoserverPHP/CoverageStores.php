@@ -171,9 +171,7 @@ class CoverageStores extends Wrapper {
 
     $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
-    $curl->delete($options, [
-      "Accept: application/json"
-    ]);
+    $curl->delete($options);
   }
 
   /**
