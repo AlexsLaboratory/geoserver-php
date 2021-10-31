@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v1.4.1](https://github.com/Lowe-Man/geoserver-php/compare/v1.4.0...v1.4.1) - 2021-10-30
+
+
+
+
+### Commits
+
+-  Datastore and Coverstore Delete Methods [`a1e3ef3`](https://github.com/Lowe-Man/geoserver-php/commit/a1e3ef39d86b7fc1b49c5f8c70db44d6fe409afb)
+
 ## [v1.4.0](https://github.com/Lowe-Man/geoserver-php/compare/v1.3.1...v1.4.0) - 2021-10-12
 
 
