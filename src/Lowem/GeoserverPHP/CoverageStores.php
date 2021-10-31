@@ -140,7 +140,7 @@ class CoverageStores extends Wrapper {
    */
   public function delete($workspaceName, $store, $options = [
     "purge" => "all",
-    "recurse" => FALSE
+    "recurse" => TRUE
   ]) {
     $acceptedParams = [
       "purge",
@@ -169,9 +169,9 @@ class CoverageStores extends Wrapper {
       }
     }
 
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store?" . http_build_query($options));
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
-    $curl->delete($options);
+    $curl->delete();
   }
 
   /**

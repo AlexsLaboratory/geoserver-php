@@ -55,13 +55,26 @@ class DataStoresTest extends TestCase {
   }
 
   public function testUpdate() {
-    $coverageStore = new DataStores($this->baseURL);
-    $coverageStore->setBasicAuth("admin", "geoserver");
+    $dataStore = new DataStores($this->baseURL);
+    $dataStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
-      $coverageStore->update("acme", "test123", [
+      $dataStore->update("acme", "test123", [
         "name" => "test142"
       ]);
+    } catch (HTTPRequestException $e) {
+      $error = TRUE;
+      echo $e->getCustomMessage();
+    }
+    self::assertFalse($error);
+  }
+
+  public function testDelete() {
+    $dataStore = new DataStores($this->baseURL);
+    $dataStore->setBasicAuth("admin", "geoserver");
+    $error = FALSE;
+    try {
+      $dataStore->delete("acme", "test1");
     } catch (HTTPRequestException $e) {
       $error = TRUE;
       echo $e->getCustomMessage();
@@ -74,7 +87,7 @@ class DataStoresTest extends TestCase {
     $dataStore->setBasicAuth("admin", "geoserver");
     $error = FALSE;
     try {
-      $dataStore->shapeFileUpload("acme", "nyc_roads5", "/Users/LoweM/Downloads/nyc_roads.zip");
+      $dataStore->shapeFileUpload("acme", "nyc_roads100", "/Users/LoweM/Downloads/nyc_roads.zip");
     } catch (HTTPRequestException $e) {
       $error = TRUE;
       echo $e->getCustomMessage();

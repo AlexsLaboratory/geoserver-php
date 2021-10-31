@@ -47,7 +47,7 @@ class CoverageStoresTest extends TestCase {
     $error = FALSE;
     $result = "";
     try {
-      $result = $coverageStore->get("World_Claim", "TestCoverStore2");
+      $result = $coverageStore->get("acme", "Test1");
     } catch (HTTPRequestException $e) {
       $error = TRUE;
       echo $e->getCustomMessage();
@@ -64,6 +64,19 @@ class CoverageStoresTest extends TestCase {
       $coverageStore->update("World_Claim", "TestCoverStore2", [
         "name" => "TestCover"
       ]);
+    } catch (HTTPRequestException $e) {
+      $error = TRUE;
+      echo $e->getCustomMessage();
+    }
+    self::assertFalse($error);
+  }
+
+  public function testDelete() {
+    $coverageStore = new CoverageStores($this->baseURL);
+    $coverageStore->setBasicAuth("admin", "geoserver");
+    $error = FALSE;
+    try {
+      $coverageStore->delete("acme", "test1");
     } catch (HTTPRequestException $e) {
       $error = TRUE;
       echo $e->getCustomMessage();

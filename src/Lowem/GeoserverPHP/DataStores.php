@@ -132,7 +132,7 @@ class DataStores extends Wrapper {
   /**
    * @throws HTTPRequestException
    */
-  public function delete($workspaceName, $store, $recurse = FALSE) {
+  public function delete($workspaceName, $store, $recurse = TRUE) {
     if (empty($workspaceName) || empty($store)) {
       try {
         throw new MissingParamException("Sorry but \"workspaceName\" and \"store\" are required fields.", 404);
@@ -146,9 +146,9 @@ class DataStores extends Wrapper {
       "recurse" => $recurse ? "true" : "false"
     ];
 
-    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store");
+    $curl = new EasyCurl($this->getBaseURL() . "/workspaces/$workspaceName/coveragestores/$store?" . http_build_query($options));
     $curl->setBasicAuth($this->getUsername(), $this->getPassword());
-    $curl->delete($options);
+    $curl->delete();
   }
 
   /**
